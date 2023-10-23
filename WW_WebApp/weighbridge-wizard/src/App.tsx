@@ -1,10 +1,12 @@
 import {useState} from 'react';
 import './App.css';
-import {MuiTypography} from './components/MuiTypography'; // For debugging and testing my fonts
+import { createTheme,colors,ThemeProvider } from '@mui/material';
+//import {MuiTypography} from './components/MuiTypography'; // For debugging and testing my fonts
 import {LandingPage} from './components/LandingPage';
 import {Dashboard} from './components/Dashboard';
 import DevPage from './components/DevPage';
 
+const theme = createTheme({palette:{secondary:{main: colors.deepPurple[900]}}})
 function App() {
     const [currentPage, setCurrentPage] = useState('LandingPage');
     // The master hook for managing what state the entire application will be in. By default users should pass verifications via login on the landing page.
@@ -27,6 +29,7 @@ function App() {
 
     // Rendering is on the condition that state === 'name of state'
     return (
+      <ThemeProvider theme={theme}>
         <div className="App">
             {
             currentPage === 'LandingPage' && <LandingPage changePageToDashboard={changePageToDashboard}/>}
@@ -35,6 +38,7 @@ function App() {
             {
             currentPage === 'DevPage' && <DevPage prop={logout}/>}
          </div>
+      </ThemeProvider>
     );
 }
 
