@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHatWizard } from '@fortawesome/free-solid-svg-icons';
 import { faRightFromBracket } from '@fortawesome/free-solid-svg-icons';
 import { faGear } from '@fortawesome/free-solid-svg-icons';
+import SettingsButton from './SettingsButton';
 /**
  * This Appbar is only for use when the user is logged in
  * And is working. It should only be used for bare minimum functionality 
@@ -20,7 +21,7 @@ const DashAppBar: React.FC < DashboardProps2 > = ({logout}) =>{
     const [signOutHover,setSignOutHover] = useState(false);
 
     //Sets states for hovering over my settings button , causing the icon to animate
-    const settingsHovering = () =>{setSettingsHover(true)};
+    const settingsWhenHovering = () =>{setSettingsHover(true)};
     const settingsNoLongerHovering = () =>{setSettingsHover(false)};
 
     //Sets animation state on the log out button
@@ -44,13 +45,11 @@ const DashAppBar: React.FC < DashboardProps2 > = ({logout}) =>{
             Dashboard
         </Typography>
         <Typography variant="h4" component="div" sx={{ flexGrow: 1,paddingLeft:'12px' }}/>
-       
-        <Button  onMouseEnter={settingsHovering} onMouseLeave={settingsNoLongerHovering} color="inherit" >
-            Settings{settingsHover ? (
-             <FontAwesomeIcon icon={faGear} style={{ marginLeft: '6px' }} size='lg' spin />
-            ) : (
-                <FontAwesomeIcon icon={faGear} style={{ marginLeft: '6px' }} size='lg' />  )}
-        </Button>            
+        <SettingsButton
+            settingsHover={settingsHover}
+            settingsWhenHovering={settingsWhenHovering}
+            settingsNoLongerHovering={settingsNoLongerHovering}
+        />                     
         <Typography variant="h6" component="span" style={{ margin: '0 8px',marginBottom: '5px' }}>|</Typography>
         <Button onClick={logout} onMouseEnter={signOutMouseOver} onMouseLeave={signOutMouseGone} color="inherit">Sign Out{signOutHover?(
             <FontAwesomeIcon icon={faRightFromBracket} beatFade style={{ marginLeft: '6px' }} />):(
