@@ -1,5 +1,5 @@
 import React from "react";
-import LandingAppBar from "./subcomponents/LandingAppBar";
+import SimpleAppBar from "./subcomponents/SimpleAppbar";
 // This interface enables props to comply with typescript's strict typing rules!
 interface LandingPageProps {
     changePageToDashboard: () => void; // Defines the prop as a void function.
@@ -9,7 +9,7 @@ interface LandingPageProps {
 export const LandingPage: React.FC < LandingPageProps > = ({changePageToDashboard}) =>{
         return(
         <>  
-            <LandingAppBar/>
+            <SimpleAppBar/>
             <h1>LANDING PAGE</h1>
             <p>This is the landing page.</p>
             <button onClick={changePageToDashboard}>Simulate log in successful</button>

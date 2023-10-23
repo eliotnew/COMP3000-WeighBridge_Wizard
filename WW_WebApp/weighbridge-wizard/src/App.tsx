@@ -1,20 +1,21 @@
 import {useState} from 'react';
 import './App.css';
-import { createTheme,colors,ThemeProvider } from '@mui/material';
+import { createTheme,ThemeProvider } from '@mui/material/styles';
+import{colors} from '@mui/material';
 //import {MuiTypography} from './components/MuiTypography'; // For debugging and testing my fonts
 import {LandingPage} from './components/LandingPage';
 import {Dashboard} from './components/Dashboard';
 import DevPage from './components/DevPage';
 
 //const theme = createTheme({palette:{secondary:{main: colors.deepPurple[900]}}})
-const theme = createTheme({
+const PurpleTheme = createTheme({
   // Your theme configuration
   palette: {
     primary: {
-      main: '#00bcd4',
+      main: colors.indigo[900],
     },
     secondary: {
-      main: '#3f51b5',
+      main: colors.deepPurple[500],
     },
   },
 });
@@ -23,7 +24,6 @@ const theme = createTheme({
 function App() {
     const [currentPage, setCurrentPage] = useState('LandingPage');
     // The master hook for managing what state the entire application will be in. By default users should pass verifications via login on the landing page.
-
     // Function called when user passes validation upon log in.
     const changePageToDashboard = () => {
         setCurrentPage('Dashboard');
@@ -42,7 +42,7 @@ function App() {
 
     // Rendering is on the condition that state === 'name of state'
     return (
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={PurpleTheme}>
          <div className="App">
             {
             currentPage === 'LandingPage' && <LandingPage changePageToDashboard={changePageToDashboard}/>}
