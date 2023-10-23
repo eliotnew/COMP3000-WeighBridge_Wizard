@@ -25,11 +25,8 @@ const DashAppBar: React.FC < DashboardProps2 > = ({logout}) =>{
           >
             WeighBridge Wizard
         </Typography>
-        <Typography variant="h4" component="div" sx={{ flexGrow: 1,paddingLeft:'12px' }}/>        
-        <div onClick={logout}>
-            <Button color="inherit">Sign Out </Button>                      
-            <FontAwesomeIcon icon={faRightFromBracket} />
-        </div>        
+        <Typography variant="h4" component="div" sx={{ flexGrow: 1,paddingLeft:'12px' }}/> 
+        <Button onClick={logout} color="inherit">Sign Out<FontAwesomeIcon icon={faRightFromBracket} style={{ marginLeft: '6px' }} /></Button> 
       </Toolbar>
     </AppBar>
   );
