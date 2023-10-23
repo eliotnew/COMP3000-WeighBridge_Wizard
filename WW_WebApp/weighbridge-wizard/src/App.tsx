@@ -8,7 +8,7 @@ import {Dashboard} from './components/Dashboard';
 import DevPage from './components/DevPage';
 
 //const theme = createTheme({palette:{secondary:{main: colors.deepPurple[900]}}})
-const PurpleTheme = createTheme({
+const indigoTheme = createTheme({
   // Your theme configuration
   palette: {
     primary: {
@@ -16,6 +16,28 @@ const PurpleTheme = createTheme({
     },
     secondary: {
       main: colors.deepPurple[500],
+    },
+  },
+});
+const deepPurpleTheme = createTheme({
+  // Your theme configuration
+  palette: {
+    primary: {
+      main: colors.deepPurple[900],
+    },
+    secondary: {
+      main: colors.indigo[500],
+    },
+  },
+});
+const greyTheme = createTheme({
+  // Your theme configuration
+  palette: {
+    primary: {
+      main: colors.grey[900],
+    },
+    secondary: {
+      main: colors.indigo[500],
     },
   },
 });
@@ -42,7 +64,7 @@ function App() {
 
     // Rendering is on the condition that state === 'name of state'
     return (
-      <ThemeProvider theme={PurpleTheme}>
+      <ThemeProvider theme={indigoTheme}>
          <div className="App">
             {
             currentPage === 'LandingPage' && <LandingPage changePageToDashboard={changePageToDashboard}/>}

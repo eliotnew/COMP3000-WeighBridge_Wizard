@@ -4,11 +4,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHatWizard } from '@fortawesome/free-solid-svg-icons';
 import { faRightToBracket } from '@fortawesome/free-solid-svg-icons';
 
-interface LandingPageProps {
-    changePageToDashboard: () => void; // Defines the prop as a void function.
+interface DashboardProps2 {
+    logout: () => void; // Defines the prop as a void function.
+    
 }
 
-const SimpleAppBar: React.FC < LandingPageProps > = ({changePageToDashboard}) =>{
+
+const DashAppBar: React.FC < DashboardProps2 > = ({logout}) =>{
   return (
     <AppBar position="static">       
       <Toolbar>
@@ -20,13 +22,10 @@ const SimpleAppBar: React.FC < LandingPageProps > = ({changePageToDashboard}) =>
             sx={{ paddingLeft:'10px', display: { xs: 'none', sm: 'block' } }}
           >
             WeighBridge Wizard
-          </Typography>
-        <Typography variant="h4" component="div" sx={{ flexGrow: 1,paddingLeft:'12px' }}>
-          
-        </Typography>
-        <Button color="inherit">About</Button>
-        <div onClick={changePageToDashboard}>
-            <Button color="inherit">Sign In </Button>
+          </Typography>      
+        
+        <div onClick={logout}>
+            <Button color="inherit">Sign Out </Button>
             <FontAwesomeIcon icon={faRightToBracket} beatFade size="lg" />
         </div>
         
@@ -35,4 +34,4 @@ const SimpleAppBar: React.FC < LandingPageProps > = ({changePageToDashboard}) =>
   );
 };
 
-export default SimpleAppBar;
+export default DashAppBar;
