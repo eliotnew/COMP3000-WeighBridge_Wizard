@@ -5,7 +5,7 @@ interface LandingPageProps {
     changePageToDashboard: () => void; // Defines the prop as a void function.
 }
 
-
+//<LandingAppBar/>
 export const LandingPage: React.FC < LandingPageProps > = ({changePageToDashboard}) =>{
         return(
         <>  

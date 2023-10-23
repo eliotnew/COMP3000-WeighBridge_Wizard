@@ -6,7 +6,20 @@ import {LandingPage} from './components/LandingPage';
 import {Dashboard} from './components/Dashboard';
 import DevPage from './components/DevPage';
 
-const theme = createTheme({palette:{secondary:{main: colors.deepPurple[900]}}})
+//const theme = createTheme({palette:{secondary:{main: colors.deepPurple[900]}}})
+const theme = createTheme({
+  // Your theme configuration
+  palette: {
+    primary: {
+      main: '#00bcd4',
+    },
+    secondary: {
+      main: '#3f51b5',
+    },
+  },
+});
+
+
 function App() {
     const [currentPage, setCurrentPage] = useState('LandingPage');
     // The master hook for managing what state the entire application will be in. By default users should pass verifications via login on the landing page.
@@ -30,7 +43,7 @@ function App() {
     // Rendering is on the condition that state === 'name of state'
     return (
       <ThemeProvider theme={theme}>
-        <div className="App">
+         <div className="App">
             {
             currentPage === 'LandingPage' && <LandingPage changePageToDashboard={changePageToDashboard}/>}
             {
@@ -39,6 +52,8 @@ function App() {
             currentPage === 'DevPage' && <DevPage prop={logout}/>}
          </div>
       </ThemeProvider>
+       
+      
     );
 }
 
