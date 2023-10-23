@@ -16,12 +16,14 @@ const SimpleAppBar: React.FC < LandingPageProps > = ({changePageToDashboard}) =>
   return (
     <AppBar position="static">       
       <Toolbar>
-      <FontAwesomeIcon icon={faHatWizard} size="2xl" flip='horizontal' style={{color: "#fdff85",}} />
-      <Typography
-            variant="h5"
+      <FontAwesomeIcon icon={faHatWizard} size="2xl" flip='horizontal' style={{color: "inherit",}} />
+      <Typography className='WizardFont'
+            variant="h4"
             noWrap
             component="div"
-            sx={{ paddingLeft:'10px', display: { xs: 'none', sm: 'block' } }}
+            sx={{ fontFamily: 'sans-serif',paddingLeft:'10px', display: { xs: 'none', sm: 'block' } }}
+            style={{
+                fontFamily: 'Bona Nova'}}
           >
             WeighBridge Wizard
           </Typography>

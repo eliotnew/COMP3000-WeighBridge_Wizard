@@ -11,7 +11,13 @@ export const LandingPage: React.FC < LandingPageProps > = ({changePageToDashboar
         <>  
             <SimpleAppBar changePageToDashboard={changePageToDashboard}/>
             <h1>LANDING PAGE</h1>
-            <p>This is the landing page.</p>            
+            <p>This is the landing page.</p>         
+
+            <div className="card">
+           <span className="WizardFont">
+               This is with Font Link. We are linking the fonts from the Google Fonts.
+           </span>
+       </div>   
         </>
     );
 }

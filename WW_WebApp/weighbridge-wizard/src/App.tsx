@@ -64,7 +64,7 @@ function App() {
 
     // Rendering is on the condition that state === 'name of state'
     return (
-      <ThemeProvider theme={indigoTheme}>
+      <ThemeProvider theme={deepPurpleTheme}>
          <div className="App">
             {
             currentPage === 'LandingPage' && <LandingPage changePageToDashboard={changePageToDashboard}/>}
