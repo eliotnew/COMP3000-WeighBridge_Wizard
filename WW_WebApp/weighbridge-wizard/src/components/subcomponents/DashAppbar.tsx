@@ -24,6 +24,8 @@ const DashAppBar: React.FC < DashboardProps2 > = ({logout}) =>{
     const settingsNoLongerHovering = () =>{setSettingsHover(false)};
 
     //Sets animation state on the log out button
+    const signOutMouseOver = () =>{setSignOutHover(true)};
+    const signOutMouseGone = () =>{setSignOutHover(false)};
     
 
 
@@ -50,7 +52,11 @@ const DashAppBar: React.FC < DashboardProps2 > = ({logout}) =>{
                 <FontAwesomeIcon icon={faGear} style={{ marginLeft: '6px' }} size='lg' />  )}
         </Button>            
         <Typography variant="h6" component="span" style={{ margin: '0 8px',marginBottom: '5px' }}>|</Typography>
-        <Button onClick={logout} color="inherit">Sign Out<FontAwesomeIcon icon={faRightFromBracket} style={{ marginLeft: '6px' }} /></Button> 
+        <Button onClick={logout} onMouseEnter={signOutMouseOver} onMouseLeave={signOutMouseGone} color="inherit">Sign Out{signOutHover?(
+            <FontAwesomeIcon icon={faRightFromBracket} beatFade style={{ marginLeft: '6px' }} />):(
+                <FontAwesomeIcon icon={faRightFromBracket}  style={{ marginLeft: '6px' }} />
+            )}
+        </Button> 
       </Toolbar>
     </AppBar>
   );
