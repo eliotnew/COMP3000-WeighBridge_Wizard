@@ -9,10 +9,9 @@ interface LandingPageProps {
 export const LandingPage: React.FC < LandingPageProps > = ({changePageToDashboard}) =>{
         return(
         <>  
-            <SimpleAppBar/>
+            <SimpleAppBar changePageToDashboard={changePageToDashboard}/>
             <h1>LANDING PAGE</h1>
-            <p>This is the landing page.</p>
-            <button onClick={changePageToDashboard}>Simulate log in successful</button>
+            <p>This is the landing page.</p>            
         </>
     );
 }
