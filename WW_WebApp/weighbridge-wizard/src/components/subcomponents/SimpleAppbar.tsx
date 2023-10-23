@@ -4,6 +4,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHatWizard } from '@fortawesome/free-solid-svg-icons';
 import { faRightToBracket } from '@fortawesome/free-solid-svg-icons';
 
+/**
+ * This App bar is only used when no-one is logged in. See "DashAppbar.tsx" for the other one 
+ */
+
 interface LandingPageProps {
     changePageToDashboard: () => void; // Defines the prop as a void function.
 }
@@ -24,12 +28,11 @@ const SimpleAppBar: React.FC < LandingPageProps > = ({changePageToDashboard}) =>
         <Typography variant="h4" component="div" sx={{ flexGrow: 1,paddingLeft:'12px' }}>
           
         </Typography>
-        <Button color="inherit">About</Button>
+        <Button color="inherit">About</Button>        
         <div onClick={changePageToDashboard}>
             <Button color="inherit">Sign In </Button>
             <FontAwesomeIcon icon={faRightToBracket} beatFade size="lg" />
-        </div>
-        
+        </div>        
       </Toolbar>
     </AppBar>
   );
