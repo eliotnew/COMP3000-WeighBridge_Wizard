@@ -28,7 +28,8 @@ const SimpleAppBar: React.FC < LandingPageProps > = ({changePageToDashboard}) =>
         <Typography variant="h4" component="div" sx={{ flexGrow: 1,paddingLeft:'12px' }}>
           
         </Typography>
-        <Button color="inherit">About</Button>        
+        <Button color="inherit">About</Button>
+        <Typography variant="h6" component="span" style={{ margin: '0 8px',marginBottom: '5px' }}>|</Typography>
         <Button onClick={changePageToDashboard} color="inherit">Sign In <FontAwesomeIcon icon={faRightToBracket} beatFade size="sm" style={{ marginLeft: '6px' }} /></Button>           
              
       </Toolbar>
