@@ -5,6 +5,7 @@ import { faHatWizard } from '@fortawesome/free-solid-svg-icons';
 import { faRightFromBracket } from '@fortawesome/free-solid-svg-icons';
 import { faGear } from '@fortawesome/free-solid-svg-icons';
 import SettingsButton from './SettingsButton';
+import {LogoutButton} from './LogoutButton';
 /**
  * This Appbar is only for use when the user is logged in
  * And is working. It should only be used for bare minimum functionality 
@@ -51,11 +52,14 @@ const DashAppBar: React.FC < DashboardProps2 > = ({logout}) =>{
             settingsNoLongerHovering={settingsNoLongerHovering}
         />                     
         <Typography variant="h6" component="span" style={{ margin: '0 8px',marginBottom: '5px' }}>|</Typography>
-        <Button onClick={logout} onMouseEnter={signOutMouseOver} onMouseLeave={signOutMouseGone} color="inherit">Sign Out{signOutHover?(
-            <FontAwesomeIcon icon={faRightFromBracket} beatFade style={{ marginLeft: '6px' }} />):(
-                <FontAwesomeIcon icon={faRightFromBracket}  style={{ marginLeft: '6px' }} />
-            )}
-        </Button> 
+        
+       
+        <LogoutButton
+            logout={logout}
+            signOutMouseOver={signOutMouseOver}
+            signOutMouseGone={signOutMouseGone}
+            signOutHover={signOutHover}
+          />
       </Toolbar>
     </AppBar>
   );
