@@ -8,7 +8,7 @@ import { useTheme } from '@emotion/react';
 
 const NavigationDrawer = () => {
     const drawerWidth = 200; // Set the width of the drawer (adjust as needed)
-    const theme=useTheme();
+    
 
     return (
       <Drawer
@@ -19,7 +19,7 @@ const NavigationDrawer = () => {
           flexShrink: 0,
           '& .MuiDrawer-paper': {
             width: drawerWidth,
-            backgroundColor: theme.palette.primary.main,
+           
             position: 'relative',
           },
         }}
