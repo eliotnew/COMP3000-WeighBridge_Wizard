@@ -4,7 +4,7 @@ import { useColorTheme } from "./use-color-theme";
 
 export{};
 
-
+//custom type declared for typescript
 type ThemeContextType = {
   mode: string;
   toggleColorMode: () => void;

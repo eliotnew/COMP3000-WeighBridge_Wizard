@@ -6,7 +6,7 @@ import{colors, CssBaseline} from '@mui/material';
 import {LandingPage} from './components/LandingPage';
 import {Dashboard} from './components/Dashboard';
 import DevPage from './components/DevPage';
-import { useThemeContext } from './themes/ThemeContextProvider';
+import { ThemeContextProvider, useThemeContext } from './themes/ThemeContextProvider';
 import ThemeSwapButton from './components/subcomponents/ThemeSwapButton';
 
 
@@ -36,7 +36,7 @@ function App() {
 
     // Rendering is on the condition that state === 'name of state'
     return (      
-        <ThemeProvider theme={theme}>
+        <ThemeContextProvider>
           <CssBaseline/>
           <div className="App">
               {
@@ -47,7 +47,7 @@ function App() {
               currentPage === 'DevPage' && <DevPage prop={logout}/>}
          </div>
          <ThemeSwapButton></ThemeSwapButton>
-         </ThemeProvider>
+         </ThemeContextProvider>
       
        
       

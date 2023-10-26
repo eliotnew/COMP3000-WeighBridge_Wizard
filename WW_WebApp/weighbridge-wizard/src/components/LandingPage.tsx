@@ -1,6 +1,7 @@
 import React from "react";
 import SimpleAppBar from "./subcomponents/SimpleAppbar";
-import NavigationDrawer from "./subcomponents/NavigationDrawer";
+import { useColorTheme } from '../themes/use-color-theme';
+
 // This interface enables props to comply with typescript's strict typing rules!
 interface LandingPageProps {
     changePageToDashboard: () => void; // Defines the prop as a void function.
@@ -8,10 +9,12 @@ interface LandingPageProps {
 
 //<LandingAppBar/>
 export const LandingPage: React.FC < LandingPageProps > = ({changePageToDashboard}) =>{
+    const { theme } = useColorTheme(); // Get the theme from your custom hook
+ 
         return(
         <>  
             <SimpleAppBar changePageToDashboard={changePageToDashboard}/>
-            
+                    
             <h1>LANDING PAGE</h1>
             <p>This is the landing page.</p>         
 
