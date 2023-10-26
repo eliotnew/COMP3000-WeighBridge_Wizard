@@ -7,6 +7,7 @@ import ListItemText from '@mui/material/ListItemText';
 import { useTheme } from '@emotion/react';
 import { useColorTheme } from '../../themes/use-color-theme';
 import { ListSubheader } from '@mui/material';
+import Clock from './Clock';
 
 const NavigationDrawer = () => {
     const drawerWidth = 200; // Set the width of the drawer (adjust as needed)
@@ -31,6 +32,7 @@ const NavigationDrawer = () => {
         }}
       >
         <Toolbar><h2 style={{}}>Actions</h2></Toolbar>
+        
         <List>
         <ListSubheader >Truck Operations</ListSubheader>
         <ListItem button >
