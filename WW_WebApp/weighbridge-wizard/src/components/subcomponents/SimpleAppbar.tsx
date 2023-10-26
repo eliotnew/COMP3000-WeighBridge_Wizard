@@ -1,5 +1,5 @@
 import React from 'react';
-import { AppBar, Toolbar, Typography, Button } from '@mui/material';
+import { AppBar, Toolbar, Typography, Button, useTheme } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHatWizard } from '@fortawesome/free-solid-svg-icons';
 import { faRightToBracket } from '@fortawesome/free-solid-svg-icons';
@@ -23,7 +23,8 @@ const SimpleAppBar: React.FC < LandingPageProps > = ({changePageToDashboard}) =>
             component="div"
             sx={{ fontFamily: 'sans-serif',paddingLeft:'10px', display: { xs: 'none', sm: 'block' } }}
             style={{
-                fontFamily: 'Bona Nova'}}
+                fontFamily: 'Bona Nova'
+                }}
           >
             WeighBridge Wizard
           </Typography>
