@@ -6,6 +6,7 @@ import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 import { useTheme } from '@emotion/react';
 import { useColorTheme } from '../../themes/use-color-theme';
+import { ListSubheader } from '@mui/material';
 
 const NavigationDrawer = () => {
     const drawerWidth = 200; // Set the width of the drawer (adjust as needed)
@@ -29,16 +30,41 @@ const NavigationDrawer = () => {
           },
         }}
       >
-        <Toolbar /> {/* This provides space for the app bar */}
+        <Toolbar><h2 style={{}}>Actions</h2></Toolbar>
         <List>
-          <ListItem button>
-            <ListItemText primary="Dashboard" />
-          </ListItem>
-          <ListItem button>
-            <ListItemText primary="Settings" />
-          </ListItem>
-          {/* Add more items as needed */}
-        </List>
+        <ListSubheader >Truck Operations</ListSubheader>
+        <ListItem button >
+          <ListItemText primary="Incoming" />
+        </ListItem>
+        <ListItem button>
+          <ListItemText primary="Outgoing" />
+        </ListItem>
+        <ListItem button>
+          <ListItemText primary="View Onsite" />
+        </ListItem>
+
+        <ListSubheader>Manage Orders</ListSubheader>
+        <ListItem button>
+          <ListItemText primary="Create New Order" />
+        </ListItem><ListItem button>
+          <ListItemText primary="Manage Outstanding Orders" />
+        </ListItem><ListItem button>
+          <ListItemText primary="View Closed Orders" />
+        </ListItem>
+
+        <ListSubheader>Utilities</ListSubheader>
+        <ListItem button>
+          <ListItemText primary="Calendar" />
+        </ListItem><ListItem button>
+          <ListItemText primary="Map" />
+        </ListItem>
+
+        <ListSubheader>Help</ListSubheader>
+        <ListItem button>
+          <ListItemText primary="Training" />
+        </ListItem>        
+
+      </List>
       </Drawer>
   );
 };
