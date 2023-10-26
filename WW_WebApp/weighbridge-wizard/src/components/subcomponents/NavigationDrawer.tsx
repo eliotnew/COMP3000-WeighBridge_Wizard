@@ -6,7 +6,7 @@ import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 import { useTheme } from '@emotion/react';
 import { useColorTheme } from '../../themes/use-color-theme';
-import { ListSubheader } from '@mui/material';
+import { ListSubheader, colors } from '@mui/material';
 import Clock from './Clock';
 
 const NavigationDrawer = () => {
