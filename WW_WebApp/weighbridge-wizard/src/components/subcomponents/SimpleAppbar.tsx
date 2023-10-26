@@ -19,14 +19,17 @@ const SimpleAppBar: React.FC < LandingPageProps > = ({changePageToDashboard}) =>
   return (
     <AppBar position="static" sx={{ backgroundColor: theme.palette.primary.main }}>       
       <Toolbar>
-      <FontAwesomeIcon icon={faHatWizard} size="2xl" flip='horizontal' style={{color: theme.palette.text.main}} />
+      <FontAwesomeIcon icon={faHatWizard} size="2xl" flip='horizontal' style={{color: theme.palette.text.primary}} />
       <Typography className='WizardFont'
             variant="h4"
             noWrap
             component="div"
+            
             sx={{ fontFamily: 'sans-serif',paddingLeft:'10px', display: { xs: 'none', sm: 'block' } }}
             style={{
-                fontFamily: 'Bona Nova'
+                fontFamily: 'Bona Nova',
+                color: theme.palette.primary.contrastText,
+                fontWeight: 1000
                 }}
           >
             WeighBridge Wizard
@@ -34,9 +37,9 @@ const SimpleAppBar: React.FC < LandingPageProps > = ({changePageToDashboard}) =>
         <Typography variant="h4" component="div" sx={{ flexGrow: 1,paddingLeft:'12px' }}>
           
         </Typography>
-        <Button color="inherit">About</Button>
-        <Typography variant="h6" component="span" style={{ margin: '0 8px',marginBottom: '5px' }}>|</Typography>
-        <Button onClick={changePageToDashboard} color="inherit">Sign In <FontAwesomeIcon icon={faRightToBracket} beatFade  style={{ marginLeft: '6px' }} /></Button>           
+        <Button  style={{color: theme.palette.primary.contrastText, fontWeight: 1000}} color="inherit">About</Button>
+        <Typography variant="h6" component="span" style={{ margin: '0 8px',marginBottom: '5px',color: theme.palette.primary.contrastText, fontWeight: 1000 }}>|</Typography>
+        <Button style={{color: theme.palette.primary.contrastText, fontWeight: 1000}} onClick={changePageToDashboard} color="inherit">Sign In <FontAwesomeIcon icon={faRightToBracket} beatFade  style={{ marginLeft: '6px' }} /></Button>           
              
       </Toolbar>
     </AppBar>
