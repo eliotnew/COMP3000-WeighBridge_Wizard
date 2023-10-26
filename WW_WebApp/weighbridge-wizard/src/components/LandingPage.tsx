@@ -12,18 +12,18 @@ export const LandingPage: React.FC < LandingPageProps > = ({changePageToDashboar
     const { theme } = useColorTheme(); // Get the theme from your custom hook
  
         return(
-        <>  
+        <div  style={{ backgroundColor: theme.palette.background.default, minHeight:'100vh',width:'100%' }}>  
             <SimpleAppBar changePageToDashboard={changePageToDashboard}/>
                     
-            <h1>LANDING PAGE</h1>
-            <p>This is the landing page.</p>         
+            <h1 style={{color: theme.palette.primary.contrastText, fontWeight: 600 }}>LANDING PAGE</h1>
+            <p style={{color: theme.palette.text.primary}}>This is the landing page.</p>         
 
             <div className="card">
            <span className="WizardFont">
                This is with Font Link. We are linking the fonts from the Google Fonts.
            </span>
-       </div>   
-        </>
+            </div>   
+        </div>
     );
 }
 export default LandingPage;

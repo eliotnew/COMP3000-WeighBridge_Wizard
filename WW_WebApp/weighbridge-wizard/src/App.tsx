@@ -1,6 +1,5 @@
 import {useState} from 'react';
 import './App.css';
-import { createTheme,ThemeProvider } from '@mui/material/styles';
 import{colors, CssBaseline} from '@mui/material';
 //import {MuiTypography} from './components/MuiTypography'; // For debugging and testing my fonts
 import {LandingPage} from './components/LandingPage';
@@ -38,15 +37,17 @@ function App() {
     return (      
         <ThemeContextProvider>
           <CssBaseline/>
-          <div className="App">
-              {
-              currentPage === 'LandingPage' && <LandingPage changePageToDashboard={changePageToDashboard}/>}
-              {
-              currentPage === 'Dashboard' && <Dashboard prop2={goToDevPage} logout={logout}/>}
-              {
-              currentPage === 'DevPage' && <DevPage prop={logout}/>}
-         </div>
-         <ThemeSwapButton></ThemeSwapButton>
+          
+          
+            <div className="App" style={{ backgroundColor: theme.palette.background.default}}>              
+                {
+                currentPage === 'LandingPage' && <LandingPage changePageToDashboard={changePageToDashboard}/>}
+                {
+                currentPage === 'Dashboard' && <Dashboard prop2={goToDevPage} logout={logout}/>}
+                {
+                currentPage === 'DevPage' && <DevPage prop={logout}/>}              
+            </div>            
+         
          </ThemeContextProvider>
       
        

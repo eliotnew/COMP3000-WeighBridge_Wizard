@@ -5,9 +5,11 @@ import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 import { useTheme } from '@emotion/react';
+import { useColorTheme } from '../../themes/use-color-theme';
 
 const NavigationDrawer = () => {
     const drawerWidth = 200; // Set the width of the drawer (adjust as needed)
+    const {theme} = useColorTheme();
     
 
     return (
@@ -19,8 +21,11 @@ const NavigationDrawer = () => {
           flexShrink: 0,
           '& .MuiDrawer-paper': {
             width: drawerWidth,
-           
+            height: "100%" ,           
             position: 'relative',
+            backgroundColor: theme.palette.secondary.main,
+            color:theme.palette.secondary.contrastText,
+            
           },
         }}
       >

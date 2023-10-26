@@ -6,6 +6,7 @@ import { faRightFromBracket } from '@fortawesome/free-solid-svg-icons';
 import { faGear } from '@fortawesome/free-solid-svg-icons';
 import SettingsButton from './SettingsButton';
 import {LogoutButton} from './LogoutButton';
+import { useColorTheme } from '../../themes/use-color-theme';
 /**
  * This Appbar is only for use when the user is logged in
  * And is working. It should only be used for bare minimum functionality 
@@ -17,6 +18,7 @@ interface DashboardProps2 {
 }
 
 const DashAppBar: React.FC < DashboardProps2 > = ({logout}) =>{
+  const { theme } = useColorTheme();
 
     const [settingsHover,setSettingsHover] = useState(false);
     const [signOutHover,setSignOutHover] = useState(false);
@@ -33,14 +35,14 @@ const DashAppBar: React.FC < DashboardProps2 > = ({logout}) =>{
 
 
   return (
-    <AppBar position="static">       
+    <AppBar position="static"  sx={{ backgroundColor: theme.palette.primary.main }}>       
       <Toolbar>
-      <FontAwesomeIcon icon={faHatWizard} size="2xl" flip='horizontal' style={{color: "inherit",}} />
+      <FontAwesomeIcon icon={faHatWizard} size="2xl" flip='horizontal' style={{color: theme.palette.primary.contrastText,}} />
       <Typography
             variant="h5"
             noWrap
             component="div"
-            sx={{ paddingLeft:'10px', display: { xs: 'none', sm: 'block' } }}
+            sx={{ paddingLeft:'10px', display: { xs: 'none', sm: 'block' }, color: theme.palette.primary.contrastText, fontWeight: 800 }}
            
           >
             Dashboard
@@ -51,10 +53,10 @@ const DashAppBar: React.FC < DashboardProps2 > = ({logout}) =>{
             settingsWhenHovering={settingsWhenHovering}
             settingsNoLongerHovering={settingsNoLongerHovering}
         />                     
-        <Typography variant="h6" component="span" style={{ margin: '0 8px',marginBottom: '5px' }}>|</Typography>
         
+        <Typography variant="h6" component="span" style={{ margin: '0 8px',marginBottom: '5px',color: theme.palette.primary.contrastText, fontWeight: 1000 }}>|</Typography>
        
-        <LogoutButton
+        <LogoutButton 
             logout={logout}
             signOutMouseOver={signOutMouseOver}
             signOutMouseGone={signOutMouseGone}
