@@ -1,16 +1,22 @@
 import {useState} from 'react';
 import './App.css';
-import { createTheme,colors,ThemeProvider } from '@mui/material';
+import{colors, CssBaseline} from '@mui/material';
 //import {MuiTypography} from './components/MuiTypography'; // For debugging and testing my fonts
 import {LandingPage} from './components/LandingPage';
 import {Dashboard} from './components/Dashboard';
 import DevPage from './components/DevPage';
+import { ThemeContextProvider, useThemeContext } from './themes/ThemeContextProvider';
+import ThemeSwapButton from './components/subcomponents/ThemeSwapButton';
 
-const theme = createTheme({palette:{secondary:{main: colors.deepPurple[900]}}})
+
+
+
+
 function App() {
     const [currentPage, setCurrentPage] = useState('LandingPage');
     // The master hook for managing what state the entire application will be in. By default users should pass verifications via login on the landing page.
-
+    const {theme} = useThemeContext();
+    
     // Function called when user passes validation upon log in.
     const changePageToDashboard = () => {
         setCurrentPage('Dashboard');
@@ -28,17 +34,24 @@ function App() {
     }
 
     // Rendering is on the condition that state === 'name of state'
-    return (
-      <ThemeProvider theme={theme}>
-        <div className="App">
-            {
-            currentPage === 'LandingPage' && <LandingPage changePageToDashboard={changePageToDashboard}/>}
-            {
-            currentPage === 'Dashboard' && <Dashboard prop2={goToDevPage} logout={logout}/>}
-            {
-            currentPage === 'DevPage' && <DevPage prop={logout}/>}
-         </div>
-      </ThemeProvider>
+    return (      
+        <ThemeContextProvider>
+          <CssBaseline/>
+          
+          
+            <div className="App" style={{ backgroundColor: theme.palette.background.default}}>              
+                {
+                currentPage === 'LandingPage' && <LandingPage changePageToDashboard={changePageToDashboard}/>}
+                {
+                currentPage === 'Dashboard' && <Dashboard prop2={goToDevPage} logout={logout}/>}
+                {
+                currentPage === 'DevPage' && <DevPage prop={logout}/>}              
+            </div>            
+         
+         </ThemeContextProvider>
+      
+       
+      
     );
 }
 
