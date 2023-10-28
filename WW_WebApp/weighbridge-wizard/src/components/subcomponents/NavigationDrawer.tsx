@@ -6,13 +6,11 @@ import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 import { useTheme } from '@emotion/react';
 import { useColorTheme } from '../../themes/use-color-theme';
-import { ListSubheader, colors } from '@mui/material';
-import Clock from './Clock';
+import { ListSubheader} from '@mui/material';
 
 const NavigationDrawer = () => {
     const drawerWidth = 200; // Set the width of the drawer (adjust as needed)
     const {theme} = useColorTheme();
-    
 
     return (
       <Drawer
@@ -27,6 +25,9 @@ const NavigationDrawer = () => {
             position: 'relative',
             backgroundColor: theme.palette.secondary.main,
             color:theme.palette.secondary.contrastText,
+            borderRadius: '12px', // Adjust the border-radius as per your preference
+            boxShadow: '0px 8px 16px rgba(0, 0, 0, 0.2)',
+            marginLeft: '3px'
             
           },
         }}
