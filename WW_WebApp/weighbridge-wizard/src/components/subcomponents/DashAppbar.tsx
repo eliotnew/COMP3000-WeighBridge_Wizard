@@ -51,7 +51,6 @@ const DashAppBar: React.FC < DashboardProps2 > = ({logout}) =>{
           >
             Dashboard
         </Typography>
-        <Clock></Clock>
         <Typography variant="h4" component="div" sx={{ flexGrow: 1,paddingLeft:'12px' }}/>
         
         <SettingsButton

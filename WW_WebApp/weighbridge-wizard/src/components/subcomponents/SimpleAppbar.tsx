@@ -38,9 +38,13 @@ const SimpleAppBar: React.FC < LandingPageProps > = ({changePageToDashboard}) =>
         <Typography variant="h4" component="div" sx={{ flexGrow: 1,paddingLeft:'12px' }}>
           
         </Typography>
-        <Button  style={{color: theme.palette.primary.contrastText, fontWeight: 1000}} color="inherit">About</Button>
+        <Button  sx={{color: theme.palette.primary.contrastText, fontWeight: 1000, '&:hover': {
+          backgroundColor: theme.palette.primary.contrastText, color: theme.palette.primary.main, transform: "scale(1.1)" // Change background color on hover
+        },}} color="inherit">About</Button>
         <Typography variant="h6" component="span" style={{ margin: '0 8px',marginBottom: '5px',color: theme.palette.primary.contrastText, fontWeight: 1000 }}>|</Typography>
-        <Button style={{color: theme.palette.primary.contrastText, fontWeight: 1000}} onClick={changePageToDashboard} color="inherit">Sign In <FontAwesomeIcon icon={faRightToBracket} beatFade  style={{ marginLeft: '6px' }} /></Button>           
+        <Button sx={{color: theme.palette.primary.contrastText, fontWeight: 1000,'&:hover': {
+          backgroundColor: theme.palette.primary.contrastText, color: theme.palette.primary.main, transform: "scale(1.1)" // Change background color on hover
+        },}} onClick={changePageToDashboard} color="inherit">Sign In <FontAwesomeIcon icon={faRightToBracket} beatFade  style={{ marginLeft: '6px' }} /></Button>           
              
       </Toolbar>
     </AppBar>

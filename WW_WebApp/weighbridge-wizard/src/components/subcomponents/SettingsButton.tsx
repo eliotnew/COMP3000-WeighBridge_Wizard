@@ -21,7 +21,7 @@ const SettingsButton: React.FC < SettingsButtonProps > = ({settingsWhenHovering,
     return(
         <>
             <Button sx={{color: theme.palette.primary.contrastText, fontWeight: 1000,'&:hover': {
-          backgroundColor: theme.palette.secondary.main, // Change background color on hover
+          backgroundColor: theme.palette.primary.contrastText, color: theme.palette.primary.main, transform: "scale(1.1)" // Change background color on hover
         }, }} onMouseEnter={settingsWhenHovering} onMouseLeave={settingsNoLongerHovering}  >
                 Settings{settingsHover ? (
                 <FontAwesomeIcon icon={faGear} style={{ marginLeft: '6px' }} size='lg' spin />
