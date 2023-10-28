@@ -9,7 +9,7 @@ import { useColorTheme } from '../../themes/use-color-theme';
 import { ListSubheader} from '@mui/material';
 
 const NavigationDrawer = () => {
-    const drawerWidth = 200; // Set the width of the drawer (adjust as needed)
+    const drawerWidth = 200; 
     const {theme} = useColorTheme();
 
     return (
@@ -20,19 +20,19 @@ const NavigationDrawer = () => {
           width: drawerWidth,
           flexShrink: 0,
           '& .MuiDrawer-paper': {
-            width: drawerWidth,
-            minHeight: "100vh" ,           
+            width: drawerWidth,                      
             position: 'relative',
             backgroundColor: theme.palette.secondary.main,
             color:theme.palette.secondary.contrastText,
             borderRadius: '12px', // Adjust the border-radius as per your preference
             boxShadow: '0px 8px 16px rgba(0, 0, 0, 0.2)',
-            marginLeft: '3px'
+            marginLeft: '3px',
+            marginBottom: '45px',
             
           },
         }}
-      >
-        <Toolbar><h2 style={{}}>Actions</h2></Toolbar>
+      ><div style={{ overflowY: 'auto', height: '100%' }}>
+        <Toolbar><h3 style={{}}>Actions</h3></Toolbar>
         
         <List>
         <ListSubheader >Truck Operations</ListSubheader>
@@ -68,6 +68,8 @@ const NavigationDrawer = () => {
         </ListItem>        
 
       </List>
+      </div>
+        
       </Drawer>
   );
 };

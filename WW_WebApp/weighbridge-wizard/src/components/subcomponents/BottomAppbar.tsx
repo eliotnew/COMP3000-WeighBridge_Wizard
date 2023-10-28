@@ -8,9 +8,8 @@ const BottomAppbar = () => {
     
     return(
         <AppBar position="static"  sx={{ backgroundColor: theme.palette.primary.main, position: 'fixed', bottom: 0, width: '100%', '&': {
-            // Customize the AppBar here
-            boxShadow: '0px 8px 16px rgba(0, 0, 0, 0.2)', // Example: Add a shadow
-            borderRadius: '12px', // Example: Add border-radius
+            boxShadow: '0px 8px 16px rgba(0, 0, 0, 0.2)',
+            borderRadius: '12px',
           }, }}>       
             <Clock></Clock>
         </AppBar>
