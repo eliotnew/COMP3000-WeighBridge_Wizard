@@ -9,13 +9,15 @@ interface DashboardProps {
     prop2: () => void;
 }
 
-export const Dashboard: React.FC <DashboardProps> = ({logout,prop2}) => {
+export const Dashboard: React.FC <DashboardProps> = ({logout,prop2}) => {    
+
+
     const {theme} = useColorTheme();
     return (
         <div style={{ backgroundColor: theme.palette.background.default, minHeight:'100vh',width:'100%' }}>
-            <DashAppBar logout={logout} />            
+            <DashAppBar logout={logout} />                     
             <NavigationDrawer></NavigationDrawer>
-            <BottomAppbar></BottomAppbar>       
+            <BottomAppbar></BottomAppbar>
             
 
         </div>
