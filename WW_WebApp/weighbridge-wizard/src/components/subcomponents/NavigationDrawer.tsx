@@ -44,7 +44,7 @@ const NavigationDrawer = () => {
         <ListItem button ><FontAwesomeIcon icon={faTruckMoving}  size='lg' style={{color: theme.palette.primary.contrastText,paddingRight:'10px'}} />
           <ListItemText primary="Incoming" />
         </ListItem>
-        <ListItem button ><FontAwesomeIcon icon={faTruckMoving}  size='lg' flip="horizontal" style={{color: theme.palette.primary.contrastText,paddingRight:'10px'}}/>
+        <ListItem button ><FontAwesomeIcon icon={faTruckMoving}  size='lg' flip="horizontal" style={{color: theme.palette.primary.contrastText,paddingLeft:'10px'}}/>
           <ListItemText primary="Outgoing" />
         </ListItem>
         <ListItem button><FontAwesomeIcon icon={faHelmetSafety}  size='lg' style={{color: theme.palette.primary.contrastText,paddingRight:'10px'}} />
