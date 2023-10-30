@@ -19,7 +19,7 @@ const Clock: React.FC = () => {
         };
       }, []);
     
-      return <Typography style={{paddingLeft: '12px', color:theme.palette.primary.contrastText}} ><FontAwesomeIcon icon={faClock}    style={{ marginRight: '6px' }} /> {time.toLocaleTimeString()}</Typography>;
+      return <Typography style={{padding:'10px', color:theme.palette.primary.contrastText}} ><FontAwesomeIcon icon={faClock}    style={{ marginRight: '6px' }} /> {time.toLocaleTimeString()}</Typography>;
     };
 
 export default Clock;

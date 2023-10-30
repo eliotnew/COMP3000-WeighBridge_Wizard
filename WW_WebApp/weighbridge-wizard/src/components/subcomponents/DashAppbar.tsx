@@ -35,10 +35,8 @@ const DashAppBar: React.FC < DashboardProps2 > = ({logout}) =>{
 
 
   return (
-    <AppBar position="static"  sx={{ backgroundColor: theme.palette.primary.main, '&': {
-      // Customize the AppBar here
-      boxShadow: '0px 8px 16px rgba(0, 0, 0, 0.2)', // Example: Add a shadow
-      borderRadius: '12px', // Example: Add border-radius
+    <AppBar position="static"  sx={{ backgroundColor: theme.palette.primary.main, height:'7.98vh', '&': {
+      boxShadow: '0px 8px 16px rgba(0, 0, 0, 0.2)', 
     }, }}>       
       <Toolbar>
       <FontAwesomeIcon icon={faHatWizard} size="2xl" flip='horizontal' style={{color: theme.palette.primary.contrastText,}} />
@@ -51,7 +49,6 @@ const DashAppBar: React.FC < DashboardProps2 > = ({logout}) =>{
           >
             Dashboard
         </Typography>
-        <Clock></Clock>
         <Typography variant="h4" component="div" sx={{ flexGrow: 1,paddingLeft:'12px' }}/>
         
         <SettingsButton
