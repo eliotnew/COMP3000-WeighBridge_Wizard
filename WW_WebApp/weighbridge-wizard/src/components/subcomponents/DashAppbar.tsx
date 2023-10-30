@@ -35,9 +35,8 @@ const DashAppBar: React.FC < DashboardProps2 > = ({logout}) =>{
 
 
   return (
-    <AppBar position="static"  sx={{ backgroundColor: theme.palette.primary.main, '&': {
+    <AppBar position="static"  sx={{ backgroundColor: theme.palette.primary.main, height:'7.98vh', '&': {
       boxShadow: '0px 8px 16px rgba(0, 0, 0, 0.2)', 
-      borderRadius: '12px', 
     }, }}>       
       <Toolbar>
       <FontAwesomeIcon icon={faHatWizard} size="2xl" flip='horizontal' style={{color: theme.palette.primary.contrastText,}} />

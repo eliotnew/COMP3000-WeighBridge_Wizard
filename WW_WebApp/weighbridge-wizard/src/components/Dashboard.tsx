@@ -17,6 +17,9 @@ export const Dashboard: React.FC <DashboardProps> = ({logout,prop2}) => {
         <div style={{ backgroundColor: theme.palette.background.default, minHeight:'100vh',width:'100%' }}>
             <DashAppBar logout={logout} />                     
             <NavigationDrawer></NavigationDrawer>
+            <div className="content"     
+            ><p>dwadawdawdwadwa</p>
+            <h1>dawnoawndoawdin</h1></div>
             <BottomAppbar></BottomAppbar>
             
 

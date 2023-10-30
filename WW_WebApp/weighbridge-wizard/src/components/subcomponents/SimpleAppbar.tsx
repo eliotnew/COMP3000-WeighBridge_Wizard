@@ -17,7 +17,7 @@ const SimpleAppBar: React.FC < LandingPageProps > = ({changePageToDashboard}) =>
 
   const { theme } = useColorTheme();
   return (
-    <AppBar position="static" sx={{ backgroundColor: theme.palette.primary.main, borderRadius: '12px', // Adjust the border-radius as per your preference
+    <AppBar position="static" sx={{ backgroundColor: theme.palette.primary.main,
     boxShadow: '0px 8px 16px rgba(0, 0, 0, 0.2)', }}>       
       <Toolbar>
       <FontAwesomeIcon icon={faHatWizard} size="2xl" flip='horizontal' style={{color: theme.palette.text.primary}} />

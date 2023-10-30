@@ -7,9 +7,8 @@ const BottomAppbar = () => {
     const { theme } = useColorTheme();
     
     return(
-        <AppBar position="static"  sx={{ backgroundColor: theme.palette.primary.main, position: 'fixed', bottom: 0, width: '100%', '&': {
+        <AppBar position="static"  sx={{zIndex: (theme) => theme.zIndex.drawer + 1, backgroundColor: theme.palette.primary.main, position: 'fixed', bottom: 0,height:'5.47vh' ,width: '100%', '&': {
             boxShadow: '0px 8px 16px rgba(0, 0, 0, 0.2)',
-            borderRadius: '12px',
           }, }}>       
             <Clock></Clock>
         </AppBar>
