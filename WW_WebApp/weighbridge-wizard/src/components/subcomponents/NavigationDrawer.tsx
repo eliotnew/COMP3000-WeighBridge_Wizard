@@ -2,16 +2,15 @@ import React, { useState } from 'react';
 import Drawer from '@mui/material/Drawer';
 import Toolbar from '@mui/material/Toolbar';
 import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
-import { useTheme } from '@emotion/react';
 import { useColorTheme } from '../../themes/use-color-theme';
 import { Divider, ListItemButton, ListSubheader, Typography} from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCalendarDays, faFolderClosed, faFolderOpen, faFolderPlus, faGraduationCap, faHelmetSafety, faMapLocationDot, faTruckArrowRight, faTruckMoving } from '@fortawesome/free-solid-svg-icons';
+import InButton from './NavDrawer-Buttons/InButton'; 
 
 const NavigationDrawer = () => {
-    const drawerWidth = 275; //275
+    const drawerWidth = 300; //275
     const {theme} = useColorTheme();
 
     return (
@@ -34,13 +33,15 @@ const NavigationDrawer = () => {
             
           },
         }}
-      ><div style={{ overflowY: 'auto', height: '100%',}}>
+      ><div style={{ overflowY: 'auto', height: '100%', overflowX:'hidden'}}>
         <Toolbar><h2 style={{}}>Actions</h2></Toolbar>
         
         <List>
           <Typography variant='h6' sx={{textAlign: 'left',fontWeight:'bold',}}>Truck Operations</Typography>
           <Divider/>
           
+        <InButton></InButton>
+
         <ListItemButton ><FontAwesomeIcon icon={faTruckArrowRight}  size='lg' style={{color: theme.palette.primary.contrastText,paddingRight:'10px'}} />
           <ListItemText primary="Incoming" /> </ListItemButton>
        
