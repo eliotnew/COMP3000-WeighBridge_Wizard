@@ -30,7 +30,7 @@ export const Dashboard: React.FC <DashboardProps> = ({logout,prop2}) => {
                         <Box p={2} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', backgroundColor:"white", margin:'35px',minHeight:'77.5vh',textAlign:"center"}}>                     
                             
                             
-                            <h1> <FontAwesomeIcon icon={faHandPointLeft}  beatFade style={{color:theme.palette.primary.contrastText, paddingRight:'20px'}} />Begin work by selecting an action from the 'Actions Menu'</h1>
+                            <h2> <FontAwesomeIcon icon={faHandPointLeft}  beatFade style={{color:theme.palette.primary.contrastText, paddingRight:'20px'}} />Begin work by selecting an action from the 'Actions Menu'</h2>
                             
                         </Box>
                     </Grid>
