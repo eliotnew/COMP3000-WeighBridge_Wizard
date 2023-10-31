@@ -31,7 +31,7 @@ const NavigationDrawer = () => {
           height: '86.55vh',
           flexShrink: 0,
           '& .MuiDrawer-paper': {
-            width: drawerWidth,                     
+            width: '15vw',                     
             position: 'relative',
             backgroundColor: theme.palette.secondary.main,
             color:theme.palette.secondary.contrastText,
