@@ -34,7 +34,7 @@ const darkPalette = {
     primary:  "#a1aef7",
   },
   background: {
-    default:  "#171203",
+    default:  "#313131",
   },
   primary: {
     main: "#8ec7f6",
