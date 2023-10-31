@@ -31,13 +31,14 @@ const NavigationDrawer = () => {
           height: '86.55vh',
           flexShrink: 0,
           '& .MuiDrawer-paper': {
-            width: drawerWidth,                     
+            width: '15vw',                     
             position: 'relative',
             backgroundColor: theme.palette.secondary.main,
             color:theme.palette.secondary.contrastText,
-            borderRadius: '24px', 
+            borderRadius: '0 24px 24px 0', 
             boxShadow: '0px 8px 16px rgba(0, 0, 0, 0.2)',
-            marginLeft: '3px',          
+            marginLeft: '3px',   
+                   
             
           },
         }}
