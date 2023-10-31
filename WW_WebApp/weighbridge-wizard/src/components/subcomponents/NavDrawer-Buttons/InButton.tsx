@@ -29,7 +29,7 @@ const InButton = () =>{
           // Handle button click
         }}
       >
-        <FontAwesomeIcon icon={faTruckArrowRight} size='lg' style={{ color: theme.palette.primary.contrastText, paddingRight: '10px' }} />
+        <FontAwesomeIcon icon={faTruckArrowRight} size='lg' style={{ color: theme.palette.primary.contrastText, paddingRight: '10px'  }} />
         <ListItemText primary="Incoming" />
       </ListItemButton>
       

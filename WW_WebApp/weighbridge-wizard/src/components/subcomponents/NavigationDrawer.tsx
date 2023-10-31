@@ -12,6 +12,10 @@ import OutButton from './NavDrawer-Buttons/OutButton';
 import OnSiteButton from './NavDrawer-Buttons/OnSiteButton';
 import CreateNewOrderButton from './NavDrawer-Buttons/CreateNewOrderButton';
 import OutstandingOrderButton from './NavDrawer-Buttons/OutstandingOrderButton';
+import ClosedOrdersButton from './NavDrawer-Buttons/ClosedOrdersButton';
+import CalendarButton from './NavDrawer-Buttons/CalendarButton';
+import MapButton from './NavDrawer-Buttons/MapButton';
+import TrainingButton from './NavDrawer-Buttons/TrainingButton';
 
 const NavigationDrawer = () => {
     const drawerWidth = 300; //275
@@ -51,30 +55,20 @@ const NavigationDrawer = () => {
         <Typography  variant='h6' sx={{textAlign: 'left',fontWeight:'bold',}}>Manage Orders</Typography>
         <Divider/>
 
-        <CreateNewOrderButton></CreateNewOrderButton>
-       
+        <CreateNewOrderButton></CreateNewOrderButton>       
         <OutstandingOrderButton></OutstandingOrderButton>
-        <ListItemButton> <FontAwesomeIcon icon={faFolderOpen}  size='lg' style={{color: theme.palette.primary.contrastText,paddingRight:'10px'}} />
-          <ListItemText primary="Manage Outstanding Orders" /> 
-        </ListItemButton>
-        <ListItemButton> <FontAwesomeIcon icon={faFolderClosed}  size='lg' style={{color: theme.palette.primary.contrastText,paddingRight:'10px'}}/>
-          <ListItemText primary="View Closed Orders" /> 
-        </ListItemButton>
+        <ClosedOrdersButton></ClosedOrdersButton>
 
         <Typography  variant='h6' sx={{textAlign: 'left',fontWeight:'bold',}}>Utilities</Typography>
         <Divider/>
-        <ListItemButton> <FontAwesomeIcon icon={faCalendarDays}  size='lg' style={{color: theme.palette.primary.contrastText,paddingRight:'10px'}}/>
-          <ListItemText primary="Calendar" />
-        </ListItemButton>
-        <ListItemButton> <FontAwesomeIcon icon={faMapLocationDot}  size='lg' style={{color: theme.palette.primary.contrastText,paddingRight:'10px'}}/>
-          <ListItemText primary="Map" />
-        </ListItemButton>
+
+        <CalendarButton></CalendarButton>
+        <MapButton></MapButton>        
 
         <Typography  variant='h6' sx={{textAlign: 'left',fontWeight:'bold',}}>Help</Typography>
         <Divider/>
-        <ListItemButton> <FontAwesomeIcon icon={faGraduationCap}  size='lg' style={{color: theme.palette.primary.contrastText,paddingRight:'10px'}}/>
-          <ListItemText primary="Training" />
-        </ListItemButton>        
+
+        <TrainingButton></TrainingButton>     
 
       </List>
       </div>
