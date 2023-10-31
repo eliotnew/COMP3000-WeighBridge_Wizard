@@ -27,7 +27,7 @@ export const Dashboard: React.FC <DashboardProps> = ({logout,prop2}) => {
 
                     {/* Box to the Right */}
                     <Grid item xs={10}>
-                        <Box p={2} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', backgroundColor:"white", margin:'35px',minHeight:'77.5vh',textAlign:"center"}}>                     
+                        <Box p={2} sx={{ borderStyle:'dashed',display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', backgroundColor:"white", margin:'35px',minHeight:'77.5vh',textAlign:"center"}}>                     
                             
                             
                             <h2> <FontAwesomeIcon icon={faHandPointLeft}  beatFade style={{color:theme.palette.primary.contrastText, paddingRight:'20px'}} />Begin work by selecting an action from the 'Actions Menu'</h2>
