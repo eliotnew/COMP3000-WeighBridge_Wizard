@@ -39,11 +39,11 @@ const SimpleAppBar: React.FC < LandingPageProps > = ({changePageToDashboard}) =>
           
         </Typography>
         <Button  sx={{color: theme.palette.primary.contrastText, fontWeight: 1000, '&:hover': {
-          backgroundColor: theme.palette.primary.contrastText, color: theme.palette.primary.main, transform: "scale(1.1)" // Change background colour on hover
+          backgroundColor: theme.palette.primary.contrastText, color: theme.palette.primary.main, transform: "scale(1.1)",transition: 'transform 0.35s' // Change background colour on hover
         },}} color="inherit">About</Button>
         <Typography variant="h6" component="span" style={{ margin: '0 8px',marginBottom: '5px',color: theme.palette.primary.contrastText, fontWeight: 1000 }}>|</Typography>
         <Button sx={{color: theme.palette.primary.contrastText, fontWeight: 1000,'&:hover': {
-          backgroundColor: theme.palette.primary.contrastText, color: theme.palette.primary.main, transform: "scale(1.1)" // Change background colour on hover
+          backgroundColor: theme.palette.primary.contrastText, color: theme.palette.primary.main, transform: "scale(1.1)",transition: 'transform 0.35s' // Change background colour on hover
         },}} onClick={changePageToDashboard} color="inherit">Sign In <FontAwesomeIcon icon={faRightToBracket} beatFade  style={{ marginLeft: '6px' }} /></Button>           
              
       </Toolbar>

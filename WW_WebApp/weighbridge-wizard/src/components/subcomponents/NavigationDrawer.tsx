@@ -2,16 +2,23 @@ import React, { useState } from 'react';
 import Drawer from '@mui/material/Drawer';
 import Toolbar from '@mui/material/Toolbar';
 import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
-import { useTheme } from '@emotion/react';
 import { useColorTheme } from '../../themes/use-color-theme';
 import { Divider, ListItemButton, ListSubheader, Typography} from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCalendarDays, faFolderClosed, faFolderOpen, faFolderPlus, faGraduationCap, faHelmetSafety, faMapLocationDot, faTruckArrowRight, faTruckMoving } from '@fortawesome/free-solid-svg-icons';
+import InButton from './NavDrawer-Buttons/InButton'; 
+import OutButton from './NavDrawer-Buttons/OutButton';
+import OnSiteButton from './NavDrawer-Buttons/OnSiteButton';
+import CreateNewOrderButton from './NavDrawer-Buttons/CreateNewOrderButton';
+import OutstandingOrderButton from './NavDrawer-Buttons/OutstandingOrderButton';
+import ClosedOrdersButton from './NavDrawer-Buttons/ClosedOrdersButton';
+import CalendarButton from './NavDrawer-Buttons/CalendarButton';
+import MapButton from './NavDrawer-Buttons/MapButton';
+import TrainingButton from './NavDrawer-Buttons/TrainingButton';
 
 const NavigationDrawer = () => {
-    const drawerWidth = 275; //275
+    const drawerWidth = 300; //275
     const {theme} = useColorTheme();
 
     return (
@@ -34,49 +41,34 @@ const NavigationDrawer = () => {
             
           },
         }}
-      ><div style={{ overflowY: 'auto', height: '100%',}}>
+      ><div style={{ overflowY: 'auto', height: '100%', overflowX:'hidden'}}>
         <Toolbar><h2 style={{}}>Actions</h2></Toolbar>
         
         <List>
           <Typography variant='h6' sx={{textAlign: 'left',fontWeight:'bold',}}>Truck Operations</Typography>
           <Divider/>
           
-        <ListItemButton ><FontAwesomeIcon icon={faTruckArrowRight}  size='lg' style={{color: theme.palette.primary.contrastText,paddingRight:'10px'}} />
-          <ListItemText primary="Incoming" /> </ListItemButton>
-       
-        <ListItemButton ><FontAwesomeIcon icon={faTruckArrowRight}  size='lg' flip="horizontal" style={{color: theme.palette.primary.contrastText,paddingLeft:'10px'}}/>
-          <ListItemText primary="Outgoing" />
-        </ListItemButton>
-        <ListItemButton><FontAwesomeIcon icon={faHelmetSafety}  size='lg' style={{color: theme.palette.primary.contrastText,paddingRight:'10px'}} />
-          <ListItemText primary="View Onsite" />
-        </ListItemButton>
+        <InButton></InButton>
+        <OutButton></OutButton> 
+        <OnSiteButton></OnSiteButton>      
 
         <Typography  variant='h6' sx={{textAlign: 'left',fontWeight:'bold',}}>Manage Orders</Typography>
         <Divider/>
-        <ListItemButton> <FontAwesomeIcon icon={faFolderPlus}  size='lg' style={{color: theme.palette.primary.contrastText,paddingRight:'10px'}}/>
-          <ListItemText primary="Create New Order" />
-        </ListItemButton>
-        <ListItemButton> <FontAwesomeIcon icon={faFolderOpen}  size='lg' style={{color: theme.palette.primary.contrastText,paddingRight:'10px'}} />
-          <ListItemText primary="Manage Outstanding Orders" /> 
-        </ListItemButton>
-        <ListItemButton> <FontAwesomeIcon icon={faFolderClosed}  size='lg' style={{color: theme.palette.primary.contrastText,paddingRight:'10px'}}/>
-          <ListItemText primary="View Closed Orders" /> 
-        </ListItemButton>
+
+        <CreateNewOrderButton></CreateNewOrderButton>       
+        <OutstandingOrderButton></OutstandingOrderButton>
+        <ClosedOrdersButton></ClosedOrdersButton>
 
         <Typography  variant='h6' sx={{textAlign: 'left',fontWeight:'bold',}}>Utilities</Typography>
         <Divider/>
-        <ListItemButton> <FontAwesomeIcon icon={faCalendarDays}  size='lg' style={{color: theme.palette.primary.contrastText,paddingRight:'10px'}}/>
-          <ListItemText primary="Calendar" />
-        </ListItemButton>
-        <ListItemButton> <FontAwesomeIcon icon={faMapLocationDot}  size='lg' style={{color: theme.palette.primary.contrastText,paddingRight:'10px'}}/>
-          <ListItemText primary="Map" />
-        </ListItemButton>
+
+        <CalendarButton></CalendarButton>
+        <MapButton></MapButton>        
 
         <Typography  variant='h6' sx={{textAlign: 'left',fontWeight:'bold',}}>Help</Typography>
         <Divider/>
-        <ListItemButton> <FontAwesomeIcon icon={faGraduationCap}  size='lg' style={{color: theme.palette.primary.contrastText,paddingRight:'10px'}}/>
-          <ListItemText primary="Training" />
-        </ListItemButton>        
+
+        <TrainingButton></TrainingButton>     
 
       </List>
       </div>
