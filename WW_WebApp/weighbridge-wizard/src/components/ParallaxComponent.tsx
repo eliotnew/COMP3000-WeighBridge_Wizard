@@ -30,9 +30,9 @@ export const ParallaxComponent = () =>{
                 
                 
 
-                <ParallaxLayer  offset={0} speed={-2} factor={1}  >
+                <ParallaxLayer  offset={0} speed={-3} factor={1}  >
 
-                    <Box p={2} sx={{ borderRadius: '24px 24px 24px 24px', boxShadow: '0px 8px 16px rgba(0, 0, 0, 0.2)', alignItems: 'center', justifyContent: 'center', backgroundColor: theme.palette.secondary.main, margin:'35px',width:'50vw', Height:'25vh',textAlign:"center",mx: 'auto', display: 'flex', flexDirection: 'column',color: theme.palette.primary.contrastText, marginTop:'30vh'}}>
+                    <Box p={2} sx={{ borderRadius: '24px 24px 24px 24px', boxShadow: '0px 8px 16px rgba(0, 0, 0, 0.4)', alignItems: 'center', justifyContent: 'center', backgroundColor: theme.palette.secondary.main, margin:'35px',width:'50vw', Height:'25vh',textAlign:"center",mx: 'auto', display: 'flex', flexDirection: 'column',color: theme.palette.primary.contrastText, marginTop:'30vh'}}>
                             <h2>Welcome to</h2>
                             <Typography className='WizardFont'variant="h4" noWrap component="div" sx={{ fontFamily: 'Bona Nova',paddingBottom:'20px', display: { xs: 'none', sm: 'block' },fontWeight:1000 }}>WeighBridge Wizard...</Typography>
                             <h4>Scroll Down...</h4>                      
@@ -41,38 +41,36 @@ export const ParallaxComponent = () =>{
                 </ParallaxLayer>
 
                 {/* Page 2 */}
-                <ParallaxLayer offset={1} speed={1} factor={2}>
+                <ParallaxLayer offset={1.2} speed={1} factor={2}>
                     {/* Page 2- Title */}
-                    <Box p={2} sx={{ borderRadius: '24px 24px 24px 24px', boxShadow: '0px 8px 16px rgba(0, 0, 0, 0.2)', justifyContent: 'center', backgroundColor: theme.palette.primary.main, margin:'35px',width:'50vw', Height:'25vh',textAlign:"left",mx: 'auto', display: 'flex', flexDirection: 'column',color: theme.palette.primary.contrastText,}}>
+                    <Box p={2} sx={{ borderRadius: '24px 24px 24px 24px', boxShadow: '0px 8px 16px rgba(0, 0, 0, 0.4)', justifyContent: 'center', backgroundColor: theme.palette.primary.main, margin:'35px',width:'50vw', Height:'25vh',textAlign:"left",mx: 'auto', display: 'flex', flexDirection: 'column',color: theme.palette.primary.contrastText,}}>
                                 <h1>A weighbridge solution designed to be used by everyone and anyone...</h1>
                         </Box>    
                 </ParallaxLayer>
 
-                
-                <ParallaxLayer offset={1.2} speed={1} factor={1}>
-                    {/* Page 2- Left Box */}
-                    <Box p={2} sx={{ borderRadius: '24px 24px 24px 24px', boxShadow: '0px 8px 16px rgba(0, 0, 0, 0.2)', alignItems: 'center', justifyContent: 'center', backgroundColor: theme.palette.secondary.main, margin:'35px',width:'25vw', Height:'25vh',textAlign:"left", display: 'flex', flexDirection: 'column',color: theme.palette.primary.contrastText, }}>
-                                
-                                <img src={tabs} alt="Image taken from storyset.com in compliance" style={{ width: '200px', height: '200px' }}/>
-                                <h3> Responsive & Interactive design to create a productive workflow using dynamic tabs to keep up with busy demand.</h3>
-                        </Box>    
-                </ParallaxLayer>
-                <ParallaxLayer offset={1.2} speed={1} factor={1}>                    
-                    {/* Page 2- Middle Box */}
-                    <Box p={2} sx={{ borderRadius: '24px 24px 24px 24px', boxShadow: '0px 8px 16px rgba(0, 0, 0, 0.2)', alignItems: 'center', justifyContent: 'center', backgroundColor: theme.palette.secondary.main, margin:'35px',width:'25vw', Height:'25vh',textAlign:"center",mx: 'auto', display: 'flex', flexDirection: 'column',color: theme.palette.primary.contrastText,}}>
+                <ParallaxLayer offset={1.5} speed={1} factor={1}> 
+
+                    <Container sx={{display: 'flex', flexDirection:'row'}}>
+                        <Box p={2} sx={{ borderRadius: '24px 24px 24px 24px', boxShadow: '0px 8px 16px rgba(0, 0, 0,0.4)', alignItems: 'center', justifyContent: 'center', backgroundColor: theme.palette.secondary.main, margin:'35px',width:'25vw', Height:'25vh',textAlign:"left", display: 'flex', flexDirection: 'column',color: theme.palette.primary.contrastText, }}>
+                                    
+                                    <img src={tabs} alt="Image taken from storyset.com in compliance" style={{ width: '200px', height: '200px' }}/>
+                                    <h3> Responsive & Interactive design to create a productive workflow using dynamic tabs to keep up with busy demand.</h3>
+                            </Box>    
+                        <Box p={2} sx={{ borderRadius: '24px 24px 24px 24px', boxShadow: '0px 8px 16px rgba(0, 0, 0, 0.2)', alignItems: 'center', justifyContent: 'center', backgroundColor: theme.palette.secondary.main, margin:'35px',width:'25vw', Height:'25vh',textAlign:"center",mx: 'auto', display: 'flex', flexDirection: 'column',color: theme.palette.primary.contrastText,}}>
                                 
                                 <img src={learning} alt="Image taken from storyset.com in compliance" style={{ width: '200px', height: '200px' }}/>
                                 <h3> Featuring intuitive user friendly interface with help and training within the application. </h3>
-                        </Box>    
-                </ParallaxLayer>
-                <ParallaxLayer offset={1.2} speed={1} factor={1}>
-                    {/* Page 2- Right Box */}
-                    <Box p={2} sx={{ borderRadius: '24px 24px 24px 24px', boxShadow: '0px 8px 16px rgba(0, 0, 0, 0.2)', alignItems: 'left', justifyContent: 'center', backgroundColor: theme.palette.secondary.main, margin:'35px',width:'25vw', Height:'25vh',textAlign:"right",mx: 'auto', display: 'flex', flexDirection: 'column',color: theme.palette.primary.contrastText, }}>
+                        </Box>   
+                        <Box p={2} sx={{ borderRadius: '24px 24px 24px 24px', boxShadow: '0px 8px 16px rgba(0, 0, 0, 0.2)', alignItems: 'center', justifyContent: 'center', backgroundColor: theme.palette.secondary.main, margin:'35px',width:'25vw', Height:'25vh',textAlign:"right",mx: 'auto', display: 'flex', flexDirection: 'column',color: theme.palette.primary.contrastText, }}>
                                 
                                 <img src={manage} alt="Image taken from storyset.com in compliance" style={{ width: '200px', height: '200px' }}/>
                                 <h3> Making it cheaper and easier for you to manage your weighbridge staff force!</h3>
-                        </Box>    
+                        </Box>  
+                        
+                    </Container>              
+                   
                 </ParallaxLayer>
+               
 
                 {/* Page 3 */}
 
