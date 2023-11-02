@@ -7,6 +7,7 @@ import {Dashboard} from './components/Dashboard';
 import DevPage from './components/DevPage';
 import { ThemeContextProvider, useThemeContext } from './themes/ThemeContextProvider';
 import ThemeSwapButton from './components/subcomponents/ThemeSwapButton';
+import ParallaxComponent from './components/ParallaxComponent';
 
 
 
@@ -35,6 +36,7 @@ function App() {
 
     // Rendering is on the condition that state === 'name of state'
     return (      
+      <>
         <ThemeContextProvider>
           <CssBaseline/>
           
@@ -49,8 +51,8 @@ function App() {
             </div>            
          
          </ThemeContextProvider>
-      
-       
+                  
+      </>   
       
     );
 }
