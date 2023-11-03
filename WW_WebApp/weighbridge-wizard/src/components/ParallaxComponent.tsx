@@ -1,6 +1,6 @@
 import { Box, Container, Typography } from "@mui/material";
 import { IParallax, Parallax,ParallaxLayer } from "@react-spring/parallax"
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useColorTheme } from "../themes/use-color-theme";
 import { start } from "repl";
 import pic1 from '../img_Assets/truck1.jpg';
@@ -14,13 +14,32 @@ import cloud from '../img_Assets/cloudGreen.png';
 import loading from '../img_Assets/loadingGreen.png';
 import { Directions } from "@mui/icons-material";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowPointer, faWandSparkles } from "@fortawesome/free-solid-svg-icons";
+import { faArrowPointer, faHatWizard, faWandSparkles } from "@fortawesome/free-solid-svg-icons";
 
 
 
 export const ParallaxComponent = () =>{
+    const [thisPage,setThisPage] = useState(0); //Starting state on page zero
     const {theme} = useColorTheme();
     const ref = useRef<IParallax | null>(null);
+
+    const slideTransitionTime = 8000;
+    const pages = 3;
+
+    //useEffect to automatically set the active page in parallax to automate and animate the landing page.
+    useEffect(() => {
+        const autoSlides = setInterval(()=>{
+            
+            const nextSlide = (thisPage+1) % pages; //gets next slide
+            ref.current?.scrollTo(nextSlide);
+            setThisPage(nextSlide);
+        },slideTransitionTime);
+
+        return()=>{
+            clearInterval(autoSlides);
+        };
+    },[thisPage])
+
     return(
         <>
             <Parallax pages={3} ref={ref}>
@@ -36,9 +55,10 @@ export const ParallaxComponent = () =>{
                 <ParallaxLayer  offset={0} speed={-3} factor={1} onClick={() => ref.current?.scrollTo(1)} >
 
                     <Box p={2} sx={{ borderRadius: '24px 24px 24px 24px', boxShadow: '0px 8px 16px rgba(0, 0, 0, 0.4)', alignItems: 'center', justifyContent: 'center', backgroundColor: theme.palette.secondary.main, margin:'35px',width:'50vw', Height:'25vh',textAlign:"center",mx: 'auto', display: 'flex', flexDirection: 'column',color: theme.palette.primary.contrastText, marginTop:'30vh'}}>
-                            <h2>Welcome to</h2>
+                            <h2>Welcome to:</h2>
+                            <FontAwesomeIcon icon={faHatWizard} size="2xl" flip='horizontal' style={{color: theme.palette.text.primary,}} /> 
                             <Typography className='WizardFont'variant="h4" noWrap component="div" sx={{ fontFamily: 'Bona Nova',paddingBottom:'20px', display: { xs: 'none', sm: 'block' },fontWeight:1000 }}>WeighBridge Wizard...</Typography>
-                            <h4><FontAwesomeIcon icon={faArrowPointer} beat size="xl" style={{paddingLeft:'10px',paddingRight:'10px'}} />Click to continue...</h4>                      
+                                               
                     </Box>     
                                          
                 </ParallaxLayer>
