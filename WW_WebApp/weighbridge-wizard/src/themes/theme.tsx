@@ -1,5 +1,6 @@
 import { PaletteMode } from "@mui/material";
 import { amber, deepOrange, grey, purple } from "@mui/material/colors";
+import React from "react";
 
 
 const theme = {
