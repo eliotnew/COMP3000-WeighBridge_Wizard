@@ -13,9 +13,11 @@ export const LandingPage: React.FC < LandingPageProps > = ({changePageToDashboar
     const { theme } = useColorTheme(); // Get the theme from your custom hook
  
         return(
-        <div  style={{ backgroundColor: theme.palette.background.default, minHeight:'100vh', maxHeight:'100vh',width:'100%' }}>  
-            <SimpleAppBar changePageToDashboard={changePageToDashboard}/>
-            <ParallaxComponent></ParallaxComponent>
+            <div style={{ backgroundColor: theme.palette.background.default, maxHeight: '100vh', width: '100%', overflow:'hidden' }}>
+            <SimpleAppBar changePageToDashboard={changePageToDashboard} />
+            <div style={{ height: 'calc(100vh - 10vh)' }}>
+                <ParallaxComponent />
+            </div>
         </div>
     );
 }

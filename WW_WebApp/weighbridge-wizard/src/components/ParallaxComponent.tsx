@@ -44,7 +44,7 @@ export const ParallaxComponent = () =>{
                 </ParallaxLayer>
 
                 {/* Page 2 */}
-                <ParallaxLayer offset={1.1} speed={1} factor={0} onClick={() => ref.current?.scrollTo(2)}>
+                <ParallaxLayer offset={1} speed={1} factor={0} onClick={() => ref.current?.scrollTo(2)}>
                     {/* Page 2- Title */}
                     <Box p={2} sx={{ borderRadius: '24px 24px 24px 24px', boxShadow: '0px 8px 16px rgba(0, 0, 0, 0.4)', justifyContent: 'center', backgroundColor: theme.palette.primary.main, margin:'35px',width:'50vw', Height:'25vh',textAlign:"left",mx: 'auto', display: 'flex', flexDirection: 'column',color: theme.palette.primary.contrastText,}}>
                                 <h1>A weighbridge solution designed to be used by everyone and anyone...</h1>
@@ -57,17 +57,17 @@ export const ParallaxComponent = () =>{
                         <Box p={2} sx={{ borderRadius: '24px 24px 24px 24px', boxShadow: '0px 8px 16px rgba(0, 0, 0,0.4)', alignItems: 'center', justifyContent: 'center', backgroundColor: theme.palette.secondary.main,width:'25vw', Height:'25vh',textAlign:"center", display: 'flex', flexDirection: 'column',color: theme.palette.primary.contrastText, }}>
                                     
                                     <img src={tabs} alt="Image taken from storyset.com in compliance" style={{ width: '200px', height: '200px' }}/>
-                                    <h3><FontAwesomeIcon icon={faWandSparkles} beat size="lg" /> Responsive & Interactive design to create a productive workflow using dynamic tabs to keep up with busy demand.</h3>
+                                    <h3><FontAwesomeIcon icon={faWandSparkles}  size="lg" /> Responsive & Interactive design to create a productive workflow using dynamic tabs to keep up with busy demand.</h3>
                             </Box>    
                         <Box p={2} sx={{ borderRadius: '24px 24px 24px 24px', boxShadow:  '0px 8px 16px rgba(0, 0, 0, 0.4)', alignItems: 'center', justifyContent: 'center', backgroundColor: theme.palette.secondary.main, width:'25vw', Height:'25vh',textAlign:"center",mx: 'auto', display: 'flex', flexDirection: 'column',color: theme.palette.primary.contrastText,}}>
                                 
                                 <img src={learning} alt="Image taken from storyset.com in compliance" style={{ width: '200px', height: '200px' }}/>
-                                <h3><FontAwesomeIcon icon={faWandSparkles} beat size="lg"/> Featuring intuitive user friendly interface with help and training within the application. </h3>
+                                <h3><FontAwesomeIcon icon={faWandSparkles}  size="lg"/> Featuring intuitive user friendly interface with help and training within the application. </h3>
                         </Box>   
                         <Box p={2} sx={{ borderRadius: '24px 24px 24px 24px', boxShadow:  '0px 8px 16px rgba(0, 0, 0, 0.4)', alignItems: 'center', justifyContent: 'center', backgroundColor: theme.palette.secondary.main, width:'25vw', Height:'25vh',textAlign:"center",mx: 'auto', display: 'flex', flexDirection: 'column',color: theme.palette.primary.contrastText, }}>
                                 
                                 <img src={manage} alt="Image taken from storyset.com in compliance" style={{ width: '200px', height: '200px' }}/>
-                                <h3><FontAwesomeIcon icon={faWandSparkles} beat size="lg"/> Making it cheaper and easier for you to manage your weighbridge staff force!</h3>
+                                <h3><FontAwesomeIcon icon={faWandSparkles}  size="lg"/> Making it cheaper and easier for you to manage your weighbridge staff force!</h3>
                         </Box>  
                         
                     </Container>              
@@ -77,7 +77,7 @@ export const ParallaxComponent = () =>{
 
                 {/* Page 3 */}
 
-                <ParallaxLayer offset={2.1} speed={3} factor={0} onClick={() => ref.current?.scrollTo(0)}>
+                <ParallaxLayer offset={2} speed={1} factor={0} onClick={() => ref.current?.scrollTo(0)}>
                     {/* Page 3-Title */}
                     <Box p={2} sx={{ borderRadius: '24px 24px 24px 24px', boxShadow:  '0px 8px 16px rgba(0, 0, 0, 0.4)', alignItems: 'left', justifyContent: 'center', backgroundColor: theme.palette.secondary.main, margin:'35px',width:'50vw', Height:'25vh',textAlign:"left",mx: 'auto', display: 'flex', flexDirection: 'column',color: theme.palette.primary.contrastText, }}>
                                 <h1>A weighbridge solution different from others:</h1>
@@ -85,25 +85,25 @@ export const ParallaxComponent = () =>{
                 </ParallaxLayer>
 
 
-                <ParallaxLayer offset={2.5} speed={1} factor={1}
-                >
+                <ParallaxLayer offset={2.3} speed={3} factor={1}>
+                    {/* Page 3-Content */}
                     <Container sx={{display: 'flex', flexDirection:'row',  gap: '8vw' }} onClick={() => ref.current?.scrollTo(0)}>
 
                         <Box p={2}  sx={{ borderRadius: '24px 24px 24px 24px', boxShadow:  '0px 8px 16px rgba(0, 0, 0, 0.4)', alignItems: 'center', justifyContent: 'center', backgroundColor: theme.palette.primary.main, width:'25vw', Height:'25vh',textAlign:"center",mx: 'auto', display: 'flex', flexDirection: 'column',color: theme.palette.primary.contrastText, }}>
                                 
                                 <img src={ai} alt="Image taken from storyset.com in compliance" style={{ width: '200px', height: '200px' }}/>
-                                <h3> AI assisted form completion to speed up processes.</h3>
+                                <h3><FontAwesomeIcon icon={faWandSparkles}  size="lg" /> AI assisted form completion to speed up processes.</h3>
                         </Box>    
                         
                         <Box p={2} sx={{ borderRadius: '24px 24px 24px 24px', boxShadow:  '0px 8px 16px rgba(0, 0, 0, 0.4)', alignItems: 'center', justifyContent: 'center', backgroundColor: theme.palette.primary.main, width:'25vw', Height:'25vh',textAlign:"center",mx: 'auto', display: 'flex', flexDirection: 'column',color: theme.palette.primary.contrastText, }}>
                                 
                                 <img src={cloud} alt="Image taken from storyset.com in compliance" style={{ width: '200px', height: '200px' }}/>
-                                <h3> Cloud based and paperless system to save the trees!</h3>
+                                <h3><FontAwesomeIcon icon={faWandSparkles}  size="lg" /> Cloud based and paperless system to save the trees!</h3>
                         </Box>    
 
                         <Box p={2}sx={{ borderRadius: '24px 24px 24px 24px', boxShadow:  '0px 8px 16px rgba(0, 0, 0, 0.4)', alignItems: 'center', justifyContent: 'center', backgroundColor: theme.palette.primary.main, width:'25vw', Height:'25vh',textAlign:"center",mx: 'auto', display: 'flex', flexDirection: 'column',color: theme.palette.primary.contrastText, }}>
                                 <img src={loading} alt="Image taken from storyset.com in compliance" style={{ width: '200px', height: '200px' }}/>
-                                <h3> An inclusive approach to processing cargo and freight with accessibilty options</h3>
+                                <h3><FontAwesomeIcon icon={faWandSparkles}  size="lg" /> An inclusive approach to processing cargo and freight with accessibilty options.</h3>
                         </Box>
 
 
