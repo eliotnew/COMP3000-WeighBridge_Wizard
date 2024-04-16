@@ -1,4 +1,3 @@
-# COMP3000-WeighBridge_Wizard
-Final year project for UoP of a web-app for weighbridge operations designed with a user-centric approach
-
-#########THIS IS OUT DATES PLEASE VISIT THE OTHER REPO
+# This is not the Final Project Repository.
+# This is temporarily included in case examiners wish to see the project i started on.
+# if you are looking for the final year project the Weighbridge Wizard, please visit the other repository at: https://github.com/eliotnew/Weighbridge_Wizard 
